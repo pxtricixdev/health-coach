@@ -10,7 +10,7 @@ The coach keeps a short profile and a daily log per day. Everything is a markdow
 
 ## Installation
 
-Once this repo is on GitHub, install it in Claude Code:
+Install it in Claude Code:
 
 ```
 /plugin marketplace add pxtricixdev/health-coach
