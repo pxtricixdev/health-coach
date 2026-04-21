@@ -10,7 +10,7 @@ The coach keeps a short profile and a daily log per day. Everything is a markdow
 
 ## Installation
 
-Install it in Claude Code:
+### Claude Code
 
 ```
 /plugin marketplace add pxtricixdev/health-coach
@@ -23,6 +23,43 @@ For local development (before pushing, or if you're forking), install from a pat
 /plugin marketplace add /absolute/path/to/health-coach
 /plugin install health-coach@health-coach
 ```
+
+### Claude Desktop
+
+Claude Desktop doesn't have a plugin system, but you can get the same skills by pointing it at the skills directory via the filesystem MCP server.
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/pxtricixdev/health-coach.git ~/health-coach
+```
+
+2. Open your Claude Desktop config file:
+   - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+   - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+
+3. Add a filesystem MCP server entry that gives Claude access to the plugin folder:
+
+```json
+{
+  "mcpServers": {
+    "health-coach": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/YOUR_USERNAME/health-coach/plugins/health-coach"
+      ]
+    }
+  }
+}
+```
+
+Replace `/Users/YOUR_USERNAME/health-coach` with the actual path where you cloned the repo.
+
+4. Restart Claude Desktop.
+
+Once restarted, Claude can read the skill files and your data logs. The skills won't auto-activate by keyword the way they do in Claude Code — instead, start a conversation referencing the relevant `SKILL.md` file, or paste its content at the start of your session. The `/daily-check-in` and `/weekly-review` commands become regular prompts you can copy from the `commands/` folder.
 
 ## First use
 
