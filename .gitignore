@@ -1,0 +1,9 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Personal health data — never commit profile or daily logs
+plugins/health-coach/data/*
+!plugins/health-coach/data/.gitkeep

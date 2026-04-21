@@ -1,0 +1,10 @@
+{
+  "name": "health-coach",
+  "version": "0.1.0",
+  "description": "Local-first health coach for nutrition, activity and sleep. All data stays on your machine.",
+  "author": {
+    "name": "Patricia Abad",
+    "url": "https://github.com/pxtricixdev"
+  },
+  "keywords": ["health", "nutrition", "fitness", "sleep", "wellness", "coaching"]
+}

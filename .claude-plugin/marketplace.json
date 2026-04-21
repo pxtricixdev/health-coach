@@ -1,0 +1,18 @@
+{
+  "name": "health-coach",
+  "owner": {
+    "name": "Patricia Abad",
+    "url": "https://github.com/pxtricixdev"
+  },
+  "description": "Local-first health coaching plugins: nutrition, activity and sleep.",
+  "plugins": [
+    {
+      "name": "health-coach",
+      "source": "./plugins/health-coach",
+      "description": "Health coach across nutrition, activity and sleep. Works with manual entries or CSV exports from Apple Health, Garmin, Strava and Oura. All data stored locally.",
+      "version": "0.1.0",
+      "category": "health",
+      "tags": ["health", "nutrition", "fitness", "sleep", "coaching"]
+    }
+  ]
+}
